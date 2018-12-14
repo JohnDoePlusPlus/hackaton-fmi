@@ -1,0 +1,10 @@
+.layout {
+  margin: 48px 60px;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    max-width: 620px;
+    margin-left: auto;
+  }
+}

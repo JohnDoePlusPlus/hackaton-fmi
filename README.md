@@ -1,11 +1,38 @@
-# Simple Todo List
+## Installation
 
-The Meteor Tutorial app.
+```sh
+git clone https://github.com/MVPFactory/ck_targeting_frontend.git ck_targeting_frontend
+cd ck_targeting_frontend
+yarn
+```
 
-Use it to share a single todo list with your friends. The list updates on everyone's screen in real time, and you can make tasks private if you don't want others to see them.
+## Run
 
-Learn how to build this app by following the [Meteor Tutorial](https://www.meteor.com/tutorials/react/creating-an-app).
+#### Test
+```bash
+yarn test # test
+yarn test:watch
+yarn test:coverage # report coverage
+```
 
-Read more about building apps with Meteor in the [Meteor Guide](http://guide.meteor.com).
+#### Development
 
-![screenshot](screenshot.png)
+```bash
+yarn start:dev # run
+```
+
+### Production
+
+#### Serve
+```bash
+yarn
+yarn build # create .next directory
+yarn start # start server
+```
+
+#### Build static HTML
+```bash
+yarn
+yarn build # create .next directory
+yarn export # create .out directory
+```

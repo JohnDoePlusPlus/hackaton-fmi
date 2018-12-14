@@ -1,0 +1,78 @@
+.radiosContainer {
+  display: flex;
+  margin-top: 30px;
+  flex-wrap: wrap;
+
+  &__checkMarks {
+    &__label {
+      display: flex;
+      margin-top: 12px;
+      flex-wrap: wrap;
+      flex-basis: 32.26%;
+      justify-content: space-between;
+      padding: 15px 15px 0 19px;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      height: 123px;
+      min-width: 200px;
+      background: #edf1f5;
+      border-radius: 20px;
+      border: 2px solid #edf1f5;
+
+      &:nth-child(3n+2) {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      &:hover {
+        background: #ffffff;
+        border-color: #edf1f5;
+      }
+
+      &__svg {
+        margin-right: 107px;
+        margin-top: 7px;
+      }
+
+      &__input {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &__checkMark {
+        height: 25px;
+        width: 25px;
+        background: #dbe1e6;
+        border-radius: 50%;
+
+        &:after {
+          content: '';
+          margin-top: 4px;
+          margin-left: 4px;
+          display: none;
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          background: #000000;
+        }
+      }
+
+      &__input:checked~&__checkMark {
+        border: solid 2px #343437;
+        background: #ffffff;
+      }
+
+      &__input:checked {
+        border: solid 2px #343437;
+      }
+
+      &__input:checked~&__checkMark:after {
+        display: block;
+      }
+    }
+  }
+}

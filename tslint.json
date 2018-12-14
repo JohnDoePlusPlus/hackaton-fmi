@@ -1,0 +1,64 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-react"
+  ],
+  "rules": {
+    "semicolon": [
+      false,
+      "never"
+    ],
+    "indent": [
+      true,
+      "spaces",
+      2
+    ],
+    "align": [
+      true,
+      "parameters",
+      "statements"
+    ],
+    "max-line-length": [
+      true,
+      125
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double"
+    ],
+    "no-var-requires": false,
+    "ordered-imports": false,
+    "interface-name": false,
+    "member-access": false,
+    "arrow-parens": false,
+    "ban-types": false,
+    "trailing-comma": false,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
+    "jsx-wrap-multiline": false,
+    "no-empty-interface": false,
+    "no-implicit-dependencies": false,
+    "no-object-literal-type-assertion": false,
+    "no-submodule-imports": false,
+    "interface-over-type-literal": false,
+    "no-string-literal": false,
+    "only-arrow-functions": false,
+    "jsx-self-close": false,
+    "one-variable-per-declaration": false,
+    "object-literal-key-quotes": false,
+    "space-before-function-paren": false,
+    "radix": false,
+    "member-ordering": [
+      false
+    ],
+    "object-literal-sort-keys": false,
+    "no-shadowed-variable": false,
+    "no-console": [
+      false
+    ],
+    "jsx-alignment": [
+      false
+    ]
+  }
+}

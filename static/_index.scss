@@ -1,0 +1,71 @@
+$max-mobile-width: 576px;
+$desktop-width: 1024px;
+$portrait: 'screen and (orientation: portrait)';
+
+@mixin mobile {
+  @media only screen and (max-width: #{$max-mobile-width - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: #{$max-mobile-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin landscapeOrientation {
+  @media only screen and (orientation: landscape) and (min-width: #{$max-mobile-width}) {
+    @content;
+  }
+}
+
+@mixin portraitOrientation {
+
+  @media only #{$portrait} and (min-width: #{$max-mobile-width}),
+  only screen and (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin notPortraitOrientation {
+  @media not #{$portrait} {
+    @content;
+  }
+}
+
+@mixin highResolution {
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-width: #{$desktop-width}) and (min-height: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+
+  &:hover:enabled {
+    opacity: .8;
+  }
+
+  &:disabled {
+    opacity: .2;
+  }
+
+  &__text {
+    margin-top: -3px;
+  }
+}
