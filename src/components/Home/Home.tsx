@@ -1,15 +1,16 @@
 import * as React from 'react';
 
-import Header from '../src/components/Header/Header';
 import * as css from '../static/index.scss';
 
-
+// import Upper from '../Upper';
+// import Down from '../Down';
 
 export default class Index extends React.Component {
   render() {
     return (
       <div className={css.welcomePage}>
-      HI
+      {/* <Upper /> */}
+      {/* <Down> </Down> */}
       </div>
     )
   }
