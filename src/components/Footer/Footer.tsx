@@ -1,7 +1,6 @@
 import { withRouter } from 'next/router';
 import * as React from 'react';
 
-import Buttons from '../Buttons/Buttons';
 import * as css from './Footer.scss';
 
 interface Props {
@@ -18,7 +17,7 @@ class Footer extends React.Component<Props> {
 
     return (
       <footer className={css.footer}>
-        <Buttons currentStep={step} />
+        Hello
       </footer>
     )
   }

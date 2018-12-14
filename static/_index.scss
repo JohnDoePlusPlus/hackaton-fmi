@@ -46,26 +46,4 @@ $portrait: 'screen and (orientation: portrait)';
   }
 }
 
-@mixin button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 64px;
-  border: none;
-  text-decoration: none;
-  outline: none;
-  cursor: pointer;
-  background: none;
-
-  &:hover:enabled {
-    opacity: .8;
-  }
-
-  &:disabled {
-    opacity: .2;
-  }
-
-  &__text {
-    margin-top: -3px;
-  }
-}
+@mixin button {}
