@@ -70,7 +70,14 @@ const HappyClient = (props) => (
 )
 
 const RegisterContainer = () => (
-    <Container fluid className={css.registerContainer}>
-
+    <Container fluid className={`d-flex justify-content-around align-items-center ${css.registerContainer}`}>
+        <div className='d-flex flex-column '>
+            <img src={clientImage} className={css.register__image}></img>
+            <Button className={css.register__button} color="success">success</Button>
+        </div>
+        <div className='d-flex flex-column '>
+            <img src={clientImage} className={css.register__image}></img>
+            <Button className={css.register__button} color="success">success</Button>
+        </div>
     </Container>
 )

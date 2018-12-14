@@ -42,7 +42,20 @@
 }
 
 .registerContainer {
-  height: 400px;
+  height: 450px;
   width: 100%;
+  background-color: red;
+  padding-right: 40%;
+  padding-left: 40%;
+}
+
+.register__image {
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
+}
+
+.register__button {
+  margin-top: 25px;
 }
 

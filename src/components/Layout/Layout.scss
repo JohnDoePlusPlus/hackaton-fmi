@@ -1,11 +1,9 @@
 .layout {
-  margin: 48px 60px;
   font-family: 'Open Sans';
 
   &__main {
     display: flex;
     flex-direction: column;
-    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
   }
