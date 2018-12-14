@@ -42,20 +42,31 @@
 }
 
 .registerContainer {
-  height: 450px;
+  height: 550px;
   width: 100%;
-  background-color: red;
+  background-color: #fff;
   padding-right: 40%;
   padding-left: 40%;
 }
 
 .register__image {
-  height: 250px;
-  width: 250px;
+  height: 400px;
+  width: 400px;
   border-radius: 100%;
 }
 
 .register__button {
   margin-top: 25px;
+  border-radius: 25px !important;
+  height: 50px;
+  width: 300px;
+}
+
+.partenersContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 150px;
+  width: 100%;
 }
 

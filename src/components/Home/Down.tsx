@@ -47,6 +47,7 @@ export default class Down extends React.Component {
 
                 <HappyClient></HappyClient>
                 <RegisterContainer></RegisterContainer>
+                <Parteners></Parteners>
             </React.Fragment>
         )
     }
@@ -71,13 +72,31 @@ const HappyClient = (props) => (
 
 const RegisterContainer = () => (
     <Container fluid className={`d-flex justify-content-around align-items-center ${css.registerContainer}`}>
-        <div className='d-flex flex-column '>
-            <img src={clientImage} className={css.register__image}></img>
-            <Button className={css.register__button} color="success">success</Button>
-        </div>
-        <div className='d-flex flex-column '>
-            <img src={clientImage} className={css.register__image}></img>
-            <Button className={css.register__button} color="success">success</Button>
-        </div>
+        <Row className='d-flex justify-content-around' style={{width: "70%"}} >
+            <Col sm={6} className='d-flex flex-column align-items-center'>
+                <img src={clientImage} className={css.register__image}></img>
+                <Button className={css.register__button} color="primary">Inregistreazate ca student</Button>
+            </Col>
+            <Col sm={6} className='d-flex flex-column align-items-center '>
+                <img src={clientImage} className={css.register__image}></img>
+                <Button className={css.register__button} color="primary">Inregistreazate ca profesor</Button>
+            </Col>
+        </Row>
+    </Container>
+)
+
+const Parteners = (props) => (
+    <Container className={css.partenersContainer}>
+        <Row>
+            <Col sm={12} md={4}>
+                <img src={clientImage}></img>
+            </Col>
+            <Col sm={12} md={4}>
+                <img src={clientImage}></img>
+            </Col>
+            <Col sm={12} md={4}>
+                <img src={clientImage}></img>
+            </Col>
+        </Row>
     </Container>
 )
