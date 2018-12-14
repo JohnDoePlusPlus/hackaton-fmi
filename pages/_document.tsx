@@ -34,6 +34,7 @@ export default class extends Document {
           <meta name="format-detection" content="telephone=no, address=no, email=no" />
           <link rel="shortcut icon" href="../static/images/logo.ico" />
           <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.find,Array.prototype.includes,String.prototype.includes,Array.prototype.findIndex,Object.entries"></script>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossOrigin="anonymous" />
         </Head>
         <body>
           <Main />
