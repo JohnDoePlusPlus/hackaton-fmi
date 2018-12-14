@@ -34,27 +34,17 @@ $portrait: 'screen and (orientation: portrait)';
   }
 }
 
-@mixin notPortraitOrientation {
-  @media not #{$portrait} {
-    @content;
-  }
-}
-
-@mixin highResolution {
-  @media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-width: #{$desktop-width}) and (min-height: #{$desktop-width}) {
-    @content;
-  }
-}
-
 @mixin button {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: none;
+  border: none !important;
   text-decoration: none;
-  outline: none;
+  outline: none !important;
   cursor: pointer;
-  background: none;
+  background: none !important;
+  box-shadow: none !important;
+  font-size: 20px !important;
 
   &:hover:enabled {
     opacity: .8;
@@ -63,4 +53,15 @@ $portrait: 'screen and (orientation: portrait)';
   &:disabled {
     opacity: .2;
   }
+}
+
+@mixin secondaryButton {
+  @include button;
+  color: #000000 !important;
+}
+
+@mixin primaryButton {
+  background-color: #00d664 !important;
+  border: none !important;
+  font-size: 20px !important;
 }

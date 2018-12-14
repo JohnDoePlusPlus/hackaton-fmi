@@ -1,1 +1,31 @@
-.home {}
+@import '../../../static/index';
+
+.home {
+  &__firstRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../../../static/images/landing.png');
+    background-position-x: 580px;
+    height: 670px;
+    padding: 0 70px;
+
+    &__mainHeader {
+      width: 590px;
+      font-size: 60px;
+    }
+
+    &__secondaryHeader {
+      font-size: 30px;
+      color: #616161;
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+
+    &__button {
+      @include primaryButton;
+      font-weight: 300 !important;
+      padding: 6px 33px !important;
+    }
+  }
+}

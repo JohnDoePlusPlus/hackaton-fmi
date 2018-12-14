@@ -3,10 +3,37 @@
 .header {
   display: flex;
   align-items: center;
+  margin: 70px;
 
   &__title {
     font-family: open-sans;
     font-weight: bold;
     color: #4d84ff;
+    margin-right: 85px;
+  }
+
+  &__anchor {
+    @include secondaryButton;
+  }
+
+  &__searchInput {
+    margin-left: auto;
+    margin-right: 56px;
+    width: 560px;
+
+    &__icon {
+      margin-top: 9px;
+      margin-right: 28px;
+    }
+  }
+
+  &__logInButton {
+    @include secondaryButton;
+  }
+
+  &__registerButton {
+    @include primaryButton;
+    border-radius: 100px !important;
+    margin-left: 14px;
   }
 }
