@@ -1,0 +1,21 @@
+.domeniu {
+    background-color: #5ae59b;
+    // background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ 
+}
+
+.header__row {
+    position: relative;
+    top: 60px;
+    box-shadow: 3px 20px 10px 0 rgba(0, 0, 0, 0.25); 
+}
+
+.maininfo {
+    display: flex;
+    background-color: #fff;
+
+}
