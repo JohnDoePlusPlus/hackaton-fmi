@@ -6,19 +6,14 @@ import Header from '../Header/Header';
 import * as css from './Layout.scss';
 
 interface Props {
-  router: {
-    query: {
-      step: string
-    }
-  }
 }
 
-class Layout extends React.Component<Props> {
+export default class Layout extends React.Component<Props> {
   render() {
-    const { children, router } = this.props
+    const { children } = this.props
     return (
       <div className={css.layout}>
-        <Header currentStep={router.query.step} />
+        <Header />
         <main className={css.layout__main}>
           {children}
         </main>
@@ -27,5 +22,3 @@ class Layout extends React.Component<Props> {
     )
   }
 }
-
-export default withRouter(Layout)

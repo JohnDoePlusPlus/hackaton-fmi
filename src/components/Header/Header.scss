@@ -3,41 +3,10 @@
 .header {
   display: flex;
   align-items: center;
-  min-height: 31px;
-  height: 31px;
-  z-index: 1;
 
-  &__text {
-    font-family: 'Px Grotesk';
-    margin-left: 10px;
-  }
-
-  &__buttons {
-    margin-left: auto;
-  }
-
-  @include tablet {
-    &__logo {
-      width: 58px;
-      height: 45px;
-    }
-
-    &__text {
-      margin-left: 15px;
-    }
-  }
-
-  @include highResolution {
-    &__logo {
-      zoom: 150%;
-    }
-
-    &__text {
-      zoom: 150%;
-    }
-
-    &__buttons {
-      zoom: 150%;
-    }
+  &__title {
+    font-family: open-sans;
+    font-weight: bold;
+    color: #4d84ff;
   }
 }
