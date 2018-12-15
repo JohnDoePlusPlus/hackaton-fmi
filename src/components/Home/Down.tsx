@@ -67,9 +67,9 @@ const HappyClient = (props) => (
             <img src={clientImage} className={css.client__image}></img>
             <span style={{ position: 'relative', top: '-35px' }}>Sergiu Prisacar <br /> USM</span>
             <p className={css.client__review}>
-                The process of launching your own design studio or web agency us vert tune consuming. There is a lot of preparation required to create notable branding, structure the website, and organize a captivationg portofolio.
+                The process of launching your own design studio or web agency is very time consuming. There is a lot of preparation required to create notable branding, structure the website, and organize a captivating portofolio.
             </p>
-            <Link href="#">
+            <Link href="#" >
                 <a href="#">View case study of project</a >
             </Link>
         </div>
@@ -112,82 +112,3 @@ const Parteners = () => (
         </Row>
     </Container>
 )
-
-class RegisterModal extends React.Component<any, any> {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            modal: false,
-            email: '',
-            password: '',
-            valid: false,
-            submited: false
-        };
-
-        this.toggle = this.toggle.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-        this.submit = this.submit.bind(this);
-    }
-
-    toggle() {
-        this.setState({
-            modal: !this.state.modal
-        });
-    }
-
-    handleChange(e) {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    }
-
-
-    submit = (e) => {
-        e.preventDefault();
-
-        const valid = this.state.email === 'test@gmail.com' && this.state.password === 'admin';
-
-        setTimeout(() => {
-            this.setState({ valid, submited: true })
-
-            if (valid) {
-                setTimeout(() => {
-                    window.location.href = '/';
-                }, 500)
-            }
-        }, 1000)
-    }
-
-    render() {
-        return (
-
-
-            <Modal isOpen={this.state.modal} toggle={this.toggle} className={css.modal}>
-                <ModalHeader toggle={this.toggle}>Sign In</ModalHeader>
-                <ModalBody>
-                    <Form onSubmit={this.submit}>
-                        <FormGroup>
-                            <Label for="email">Email</Label>
-                            <Input required onChange={this.handleChange} type="email" name="email" value={this.state.email} />
-                        </FormGroup>
-                        <FormGroup>
-                            <Label for="password">Password</Label>
-                            <Input required onChange={this.handleChange} type="password" name="password" value={this.state.password} />
-                        </FormGroup>
-                        <Fade in={this.state.submited} tag="h5" className="mt-3 d-flex justify-content-center">
-                            <span className={this.state.valid ? css.valid : css.invalid}>
-                                {this.state.valid ? "Your are logged in" : 'Incorrect email or password'}
-                            </span>
-                        </Fade>
-                        <ModalFooter style={{ justifyContent: 'center' }}>
-                            <Button type="submit" color="success">Register</Button>
-                            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-                        </ModalFooter>
-                    </Form>
-                </ModalBody>
-
-            </Modal>
-        )
-    }
-}

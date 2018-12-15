@@ -93,7 +93,7 @@ class Header extends React.Component<any, any> {
   render() {
     return (
       <header className={css.header} >
-        <h1 className={css.header__title}>Pencil.</h1>
+        <img src='/static/images/logoo.png' style={{width: '230px', height: '80px'}}></img>
         <Popover
           content={
             <Menu>
