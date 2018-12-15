@@ -9,7 +9,8 @@ import {
     CarouselControl,
     CarouselIndicators,
     CarouselCaption,
-    UncontrolledCarousel
+    UncontrolledCarousel,
+    Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, Fade
 } from 'reactstrap';
 import Link from 'next/link';
 
@@ -83,13 +84,13 @@ const RegisterContainer = () => (
                 <div className={css.register__image}>
                     <img src={'/static/images/student.png'} style={{ width: '120px' }}></img>
                 </div>
-                <Button className={css.register__button} color="success">Inregistreazate ca student</Button>
+                <Button className={css.register__button} color="success">Logheazate ca student</Button>
             </Col>
             <Col md={12} lg={6} className='d-flex flex-column align-items-center '>
                 <div className={css.register__image}>
                     <img src={'/static/images/work.png'} style={{ width: '120px' }}></img>
                 </div>
-                <Button className={css.register__button} color="success">Inregistreazate ca profesor</Button>
+                <Button className={css.register__button} color="success">Logheazate ca profesor</Button>
             </Col>
         </Row>
     </Container>
@@ -111,3 +112,82 @@ const Parteners = () => (
         </Row>
     </Container>
 )
+
+class RegisterModal extends React.Component<any, any> {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            modal: false,
+            email: '',
+            password: '',
+            valid: false,
+            submited: false
+        };
+
+        this.toggle = this.toggle.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.submit = this.submit.bind(this);
+    }
+
+    toggle() {
+        this.setState({
+            modal: !this.state.modal
+        });
+    }
+
+    handleChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+
+    submit = (e) => {
+        e.preventDefault();
+
+        const valid = this.state.email === 'test@gmail.com' && this.state.password === 'admin';
+
+        setTimeout(() => {
+            this.setState({ valid, submited: true })
+
+            if (valid) {
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 500)
+            }
+        }, 1000)
+    }
+
+    render() {
+        return (
+
+
+            <Modal isOpen={this.state.modal} toggle={this.toggle} className={css.modal}>
+                <ModalHeader toggle={this.toggle}>Sign In</ModalHeader>
+                <ModalBody>
+                    <Form onSubmit={this.submit}>
+                        <FormGroup>
+                            <Label for="email">Email</Label>
+                            <Input required onChange={this.handleChange} type="email" name="email" value={this.state.email} />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for="password">Password</Label>
+                            <Input required onChange={this.handleChange} type="password" name="password" value={this.state.password} />
+                        </FormGroup>
+                        <Fade in={this.state.submited} tag="h5" className="mt-3 d-flex justify-content-center">
+                            <span className={this.state.valid ? css.valid : css.invalid}>
+                                {this.state.valid ? "Your are logged in" : 'Incorrect email or password'}
+                            </span>
+                        </Fade>
+                        <ModalFooter style={{ justifyContent: 'center' }}>
+                            <Button type="submit" color="success">Register</Button>
+                            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                        </ModalFooter>
+                    </Form>
+                </ModalBody>
+
+            </Modal>
+        )
+    }
+}
