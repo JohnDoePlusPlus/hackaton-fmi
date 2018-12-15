@@ -11,7 +11,7 @@ class Footer extends React.Component {
         <footer className={css.footer}>
           <Row className="justify-content-between pb-4">
             <Col sm={4} style={{ height: '120px' }}>
-              <img src='/static/images/logoo.png' width="280" height="80" />
+              <img src='/static/images/logoo.png' style={{ width: '230px', height: '80px' }}></img>
             </Col>
 
             <Col sm={7} className="d-flex align-items-center ml-2">
