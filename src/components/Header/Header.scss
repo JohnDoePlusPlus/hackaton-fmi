@@ -3,7 +3,10 @@
 .header {
   display: flex;
   align-items: center;
-  margin: 70px;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 
   &__title {
     font-family: open-sans;

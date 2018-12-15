@@ -27,11 +27,11 @@ export default class Domeniu extends React.Component {
                             </Col>
                             <Col>
                                <p>
-                               Programarea informatică este o activitate informatică de elaborare 
-a produselor-program, a programelor (software) necesare activităților 
-realizate cu ajutorul calculatorului. Programarea informatică conține 
-următoarele subactivități: specificarea, proiectarea, implementarea, 
-documentarea și întreținerea produsului program.
+                                    Programarea informatică este o activitate informatică de elaborare 
+                                    a produselor-program, a programelor (software) necesare activităților 
+                                    realizate cu ajutorul calculatorului. Programarea informatică conține 
+                                    următoarele subactivități: specificarea, proiectarea, implementarea, 
+                                    documentarea și întreținerea produsului program.
                                </p>
                             </Col>
                         </Container>
