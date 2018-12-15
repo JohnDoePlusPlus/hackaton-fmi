@@ -23,27 +23,27 @@ export const Course = () => (
                     <div className="col-8">
                         <div className={`${css['custom-list']} row`}>
                             <div className="col-6 pb-3">
-                                <i className="fas fa-check"></i>
+                                <i className={`fas ${css['fa-check']}`}></i>
                                 Go from a total beginner to an advanced Javascript developer
                         </div>
                             <div className="col-6 pb-3">
-                                <i className="fas fa-check"></i>
+                                <i className={`fas ${css['fa-check']}`}></i>
                                 Go from a total beginner to an advanced Javascript developer
                         </div>
                             <div className="col-6 pb-3">
-                                <i className="fas fa-check"></i>
+                                <i className={`fas ${css['fa-check']}`}></i>
                                 Go from a total beginner to an advanced Javascript developer
                         </div>
                             <div className="col-6 pb-3">
-                                <i className="fas fa-check"></i>
+                                <i className={`fas ${css['fa-check']}`}></i>
                                 Go from a total beginner to an advanced Javascript developer
                         </div>
                             <div className="col-6 pb-3">
-                                <i className="fas fa-check"></i>
+                                <i className={`fas ${css['fa-check']}`}></i>
                                 Go from a total beginner to an advanced Javascript developer
                         </div>
                             <div className="col-6 pb-3">
-                                <i className="fas fa-check"></i>
+                                <i className={`fas ${css['fa-check']}`}></i>
                                 Go from a total beginner to an advanced Javascript developer
                         </div>
                         </div>
@@ -97,8 +97,8 @@ export const Course = () => (
                         </div>
                     </div>
                     <div className="col-3 offset-1">
-                        <div className="custom-card row p-3">
-                            <div className="custom-card-video">
+                        <div className={`${css['custom-card']} row p-3`}>
+                            <div className={`${css['custom-card-video']}`}>
                                 <iframe width="100%" height="150" src="https://www.youtube.com/embed/cKhVupvyhKk" frameBorder="0" allowFullScreen></iframe>
                             </div>
                             <h4 id="credite" className="p-3">5 Credite</h4>
