@@ -19,9 +19,9 @@ export default class CoursesNavigation extends React.Component<{}, State> {
 
   handleNavbarTabChange = (navbarTabId: string) => this.setState({ navbarTabId });
 
-  renderCourse = (course) => {
+  renderCourse = (course,index) => {
     return (
-      <div className={css.slider__imageContainer}>
+      <div key={index} className={css.slider__imageContainer}>
         <img className={css.slider__imageContainer__image} src={course.img} alt="image" />
         <div>
           Diploma in <br />
