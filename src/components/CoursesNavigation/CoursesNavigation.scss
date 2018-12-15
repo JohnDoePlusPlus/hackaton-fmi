@@ -47,6 +47,10 @@
     width: 320px !important;
   }
 
+  &>div {
+    height: 300px;
+  }
+
   &__imageContainer {
     height: 100%;
     overflow: hidden;

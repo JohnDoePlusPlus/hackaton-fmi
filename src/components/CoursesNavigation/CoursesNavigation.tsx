@@ -58,6 +58,7 @@ export default class CoursesNavigation extends React.Component<{}, State> {
           slidesToShow={4}
           slidesToScroll={1}
           arrows={true}
+          draggable={false}
         >
           {COURSES[navbarTabId].map(this.renderCourse)}
         </Slider>

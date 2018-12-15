@@ -12,7 +12,10 @@ export const TABS = [
   {
     id: 'mateInfo',
     title: 'MATE & INFO',
-    icon: ICONS.mateInfo
+    icon: ICONS.mateInfo,
+    facultati: [
+
+    ]
   },
   {
     id: 'jurnalism',

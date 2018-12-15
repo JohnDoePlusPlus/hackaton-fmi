@@ -1,11 +1,18 @@
+import { InputGroup, Menu, MenuItem, Popover, PopoverInteractionKind, Position } from '@blueprintjs/core';
 import * as React from 'react';
-import { connect, Dispatch } from 'react-redux';
-import { Popover, Position, Menu, MenuItem, PopoverInteractionKind, InputGroup } from "@blueprintjs/core";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, Fade, FormFeedback, FormText } from 'reactstrap'
-import Router from 'next/router';
-
-import { Button as RButton} from 'reactstrap'
-import { Course } from '../Course/Course';
+import {
+  Button,
+  Button as RButton,
+  Fade,
+  Form,
+  FormGroup,
+  Input,
+  Label,
+  Modal,
+  ModalBody,
+  ModalFooter,
+  ModalHeader,
+} from 'reactstrap';
 
 import * as css from './Header.scss';
 
@@ -72,6 +79,7 @@ class Header extends React.Component<any, any> {
           interactionKind={PopoverInteractionKind.HOVER}
         >
           <Button className={css.header__anchor} >
+            <i className="fas fa-th" style={{ color: '#01d662', marginRight: '10px' }}></i>
             Facultati
           </Button>
         </Popover>
