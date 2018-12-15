@@ -47,9 +47,12 @@
 
 .client__image {
   position: relative;
+  background-image: url('https://cdn3.vectorstock.com/i/1000x1000/38/32/female-face-avatar-round-flat-icon-with-women-vector-11333832.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
   border-radius: 100px;
-  height: 100px;
-  width: 100px;
+  max-height: 100px;
+  max-width: 100px;
   top: -50px;
 }
 

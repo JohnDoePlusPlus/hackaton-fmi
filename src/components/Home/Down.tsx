@@ -14,7 +14,7 @@ import {
 } from 'reactstrap';
 import Link from 'next/link';
 
-const clientImage = 'https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180'
+const clientImage = 'https://cdn3.vectorstock.com/i/1000x1000/38/32/female-face-avatar-round-flat-icon-with-women-vector-11333832.jpg'
 
 export default class Down extends React.Component {
   render() {

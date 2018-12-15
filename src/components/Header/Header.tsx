@@ -94,7 +94,9 @@ class Header extends React.Component<any, any> {
   render() {
     return (
       <header className={css.header} >
-        <img className={css.header__logo} src='/static/images/logoo.png' />
+        <a href="/">
+          <img className={css.header__logo} src='/static/images/logoo.png' />
+        </a>
         <Popover
           content={
             <Menu>
