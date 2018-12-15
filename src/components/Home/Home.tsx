@@ -7,8 +7,23 @@ import Down from './Down';
 import Layout from '../Layout/Layout';
 import { Navbar, NavbarGroup, Alignment, Tabs, Tab } from '@blueprintjs/core';
 
-export default class Home extends React.Component {
+interface State {
+  navbarTabId: string
+}
+
+export default class Home extends React.Component<{}, State> {
+  constructor(props) {
+    super(props)
+    this.state = {
+      navbarTabId: 'Home'
+    }
+  }
+
+  handleNavbarTabChange = (navbarTabId: string) => this.setState({ navbarTabId });
+
   render() {
+    const { navbarTabId } = this.state
+
     return (
       <Layout>
         <div className={css.home} >
@@ -25,12 +40,13 @@ export default class Home extends React.Component {
                 animate={true}
                 id="navbar"
                 large={true}
-                // onChange={this.handleNavbarTabChange}
-                selectedTabId={'Home'}
+
+                onChange={this.handleNavbarTabChange}
+                selectedTabId={navbarTabId}
               >
-                <Tab id="Home" title="Home" />
-                <Tab id="Files" title="Files" />
-                <Tab id="Builds" title="Builds" />
+                <Tab id="Home" title="Home" panel={<div>1</div>} />
+                <Tab id="Files" title="Files" panel={<div>2</div>} />
+                <Tab id="Builds" title="Builds" panel={<div>3</div>} />
               </Tabs>
             </NavbarGroup>
           </Navbar>
