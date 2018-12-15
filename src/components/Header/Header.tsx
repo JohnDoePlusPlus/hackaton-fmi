@@ -1,8 +1,14 @@
 import * as React from 'react';
 import { connect, Dispatch } from 'react-redux';
 import { Popover, Position, Menu, MenuItem, PopoverInteractionKind, InputGroup } from "@blueprintjs/core";
+<<<<<<< HEAD
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, Fade, FormFeedback, FormText } from 'reactstrap'
 import Router from 'next/router';
+=======
+import { Button } from 'reactstrap'
+import { Course } from '../Course/Course';
+
+>>>>>>> 2cf6ba1269d09134ba03eb5e4ff431e3786db03a
 import * as css from './Header.scss';
 
 class Header extends React.Component<any, any> {
@@ -54,6 +60,7 @@ window.location.href = '/';
     return (
       <header className={css.header}>
         <h1 className={css.header__title}>Pencil.</h1>
+      
         <Popover
           content={
             <Menu>
