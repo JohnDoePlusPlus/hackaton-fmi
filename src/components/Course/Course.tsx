@@ -3,7 +3,7 @@ import * as css from './Course.scss';
 export const Course = () => (
     <div>
         <div className={`container-fluid ${css.blueback}`}>
-            <div className="container">
+            <div className="container" style={{ color: 'white', }}>
                 <div className="row">
                     <div className="col-12">
                         <h2>Javascript pentru incepatori</h2>
@@ -108,5 +108,5 @@ export const Course = () => (
                 </div>
             </div>
         </div>
-    </div>
+    </div >
 );
