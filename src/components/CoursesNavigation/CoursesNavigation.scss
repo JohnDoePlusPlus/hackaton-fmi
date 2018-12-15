@@ -31,3 +31,29 @@
     }
   }
 }
+
+.slider {
+  margin: 50px 90px;
+  height: 250px;
+  position: relative;
+
+  &>button:before {
+    color: #00d664
+  }
+
+  &>div>div>div {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    margin: 0 15px;
+    width: 320px !important;
+  }
+
+  &__imageContainer {
+    height: 100%;
+    overflow: hidden;
+
+    &__image {
+      height: 180px;
+      width: 100%;
+    }
+  }
+}
