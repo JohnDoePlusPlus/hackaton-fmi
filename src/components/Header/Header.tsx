@@ -1,10 +1,9 @@
 import { InputGroup, Menu, MenuItem, Popover, PopoverInteractionKind, Position } from '@blueprintjs/core';
 import * as React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, Fade } from 'reactstrap'
-
-import { Button as RButton } from 'reactstrap'
-
+import Router from 'next/router';
 import * as css from './Header.scss';
+import { TABS, COURSES } from '../../constants/constants';
 
 class Header extends React.Component<any, any> {
   constructor(props) {
@@ -69,8 +68,6 @@ class Header extends React.Component<any, any> {
   submitRegister = (e) => {
     e.preventDefault();
 
-
-
     setTimeout(() => {
       this.setState({ valid2: true, submited2: true });
 
@@ -90,18 +87,20 @@ class Header extends React.Component<any, any> {
     }, 1000);
   }
 
+  openCourse = () => {
+    Router.push('/course')
+  }
+
   render() {
     return (
       <header className={css.header} >
-        <img src='/static/images/logoo.png' style={{width: '230px', height: '80px'}}></img>
+        <img className={css.header__logo} src='/static/images/logoo.png' />
         <Popover
           content={
             <Menu>
-              <MenuItem text="Submenu">
-                <MenuItem text="Child one" />
-                <MenuItem text="Child two" />
-                <MenuItem text="Child three" />
-              </MenuItem>
+              {TABS.map((tab, index) => <MenuItem key={index} text={tab.title}>
+                {COURSES[tab.id].map((facultate, index) => <MenuItem key={index} href="/course" text={facultate.diplomaIn} />)}
+              </MenuItem>)}
             </Menu>
           }
           position={Position.BOTTOM_RIGHT}
@@ -119,7 +118,7 @@ class Header extends React.Component<any, any> {
           rightElement={<img className={css.header__searchInput__icon} src="../../../static/images/search.png" alt="Search" ></img>}
           large={true}
         />
-        <RButton onClick={this.toggle1} className={css.header__logInButton}>Log In</RButton>
+        <Button onClick={this.toggle1} className={css.header__logInButton}>Log In</Button>
 
         <Modal isOpen={this.state.modal1} toggle={this.toggle1} className={css.modal}>
           <ModalHeader toggle={this.toggle1}>Sign In</ModalHeader>
@@ -139,8 +138,8 @@ class Header extends React.Component<any, any> {
                 </span>
               </Fade>
               <ModalFooter style={{ justifyContent: 'center' }}>
-                <RButton type="submit" color="success">Log In</RButton>
-                <RButton color="secondary" onClick={this.toggle1}>Cancel</RButton>
+                <Button type="submit" color="success">Log In</Button>
+                <Button color="secondary" onClick={this.toggle1}>Cancel</Button>
               </ModalFooter>
             </Form>
           </ModalBody>
@@ -191,11 +190,11 @@ class Header extends React.Component<any, any> {
 
               <ModalFooter style={{ justifyContent: 'center' }}>
                 {this.state.validatedId
-                  ? <RButton type="submit" color="success">Sign Up</RButton>
-                  : <RButton onClick={(e) => this.validateId(e)} type='submit' color="success">Validate ID</RButton>
+                  ? <Button type="submit" color="success">Sign Up</Button>
+                  : <Button onClick={(e) => this.validateId(e)} type='submit' color="success">Validate ID</Button>
                 }
 
-                <RButton color="secondary" onClick={this.toggle2}>Cancel</RButton>
+                <Button color="secondary" onClick={this.toggle2}>Cancel</Button>
               </ModalFooter>
             </Form>
           </ModalBody>

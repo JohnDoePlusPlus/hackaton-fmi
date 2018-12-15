@@ -14,43 +14,90 @@ export const TABS = [
     title: 'MATE & INFO',
     icon: ICONS.mateInfo,
     facultati: [
-
+      'Tehnologii informationale',
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
     ]
   },
   {
     id: 'jurnalism',
     title: 'JURNALISM',
-    icon: ICONS.jurnalism
+    icon: ICONS.jurnalism,
+    facultati: [
+      'Tehnologii informationale',
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
+    ]
   },
   {
     id: 'economie',
     title: 'ECONOMIE',
-    icon: ICONS.economie
+    icon: ICONS.economie,
+    facultati: [
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
+    ]
   },
   {
     id: 'drept',
     title: 'DREPT',
-    icon: ICONS.drept
+    icon: ICONS.drept,
+    facultati: [
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
+    ]
   },
   {
     id: 'istorie',
     title: 'ISTORIE',
-    icon: ICONS.istorie
+    icon: ICONS.istorie,
+    facultati: [
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
+    ]
   },
   {
     id: 'limbiStraine',
     title: 'LIMBI STRAINE',
-    icon: ICONS.limbiStraine
+    icon: ICONS.limbiStraine,
+    facultati: [
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
+    ]
   },
   {
     id: 'geografie',
     title: 'GEOGRAFIE',
-    icon: ICONS.geografie
+    icon: ICONS.geografie,
+    facultati: [
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
+    ]
   },
   {
     id: 'biochimie',
     title: 'BIOCHIMIE',
-    icon: ICONS.biochimie
+    icon: ICONS.biochimie,
+    facultati: [
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
+      'Lorem ipsum',
+    ]
   },
 ]
 export const COURSES = {

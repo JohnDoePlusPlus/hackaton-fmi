@@ -3,6 +3,7 @@ import * as React from 'react';
 import Slider from "react-slick";
 import { TABS, COURSES } from '../../constants/constants';
 import * as css from './CoursesNavigation.scss';
+import Router from 'next/router';
 
 
 interface State {
@@ -19,13 +20,17 @@ export default class CoursesNavigation extends React.Component<{}, State> {
 
   handleNavbarTabChange = (navbarTabId: string) => this.setState({ navbarTabId });
 
-  renderCourse = (course,index) => {
+  openCourse = () => {
+    Router.push('/course')
+  }
+
+  renderCourse = (course, index) => {
     return (
-      <div key={index} className={css.slider__imageContainer}>
+      <div key={index} className={css.slider__imageContainer} onClick={this.openCourse}>
         <img className={css.slider__imageContainer__image} src={course.img} alt="image" />
-        <div>
+        <div className={css.slider__imageContainer__text}>
           Diploma in <br />
-          <span>{course.diplomaIn}</span>
+          <span style={{ fontSize: '16px' }}>{course.diplomaIn}</span>
         </div>
       </div>
     )
