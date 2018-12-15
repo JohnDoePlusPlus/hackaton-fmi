@@ -4,7 +4,12 @@ import * as css from './Down.scss';
 import { Container, Row, Col, Button } from 'reactstrap'
 import {
     Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle,
+    CardTitle, CardSubtitle, Carousel,
+    CarouselItem,
+    CarouselControl,
+    CarouselIndicators,
+    CarouselCaption,
+    UncontrolledCarousel
 } from 'reactstrap';
 import Link from 'next/link';
 
@@ -18,7 +23,7 @@ export default class Down extends React.Component {
                     <Row>
                         <Col className="mt-sm-3 pt-md-0" sm={12} md={4}>
                             <Card className={`p-3 ${css.card}`}>
-                                <CardTitle>Live Interactive Webinars</CardTitle>
+                                <CardTitle className={css.cardTitle}>Live Interactive Webinars</CardTitle>
                                 <CardText style={{ fontFamily: 'open-sans', fontSize: "18px" }}>
                                     Our industry leading export educators ensure your
                                     live interactive lessons have the latest, most relevant, engaging content
@@ -27,7 +32,7 @@ export default class Down extends React.Component {
                         </Col>
                         <Col className="mt-sm-3 pt-md-0" sm={12} md={4}>
                             <Card className={`p-3 ${css.card}`}>
-                                <CardTitle>24/7 Student Support</CardTitle>
+                                <CardTitle className={css.cardTitle}>24/7 Student Support</CardTitle>
                                 <CardText style={{ fontFamily: 'open-sans', fontSize: "18px" }}>
                                     We provide support on all of our live webinars to ensure no questions goes unanswered.
                                      Attend live, ask questions, truly learn.
@@ -36,7 +41,7 @@ export default class Down extends React.Component {
                         </Col>
                         <Col className="mt-sm-3 pt-md-0" sm={12} md={4}>
                             <Card className={`p-3 ${css.card}`}>
-                                <CardTitle>Gain Your Diploma</CardTitle>
+                                <CardTitle className={css.cardTitle}>Gain Your Diploma</CardTitle>
                                 <CardText style={{ fontFamily: 'open-sans', fontSize: "18px" }}>
                                     Complete your course and gain an Accreditated Diploma. Excellent for CV/Resume or simply hanging on your wall.
                                 </CardText>
@@ -56,6 +61,7 @@ export default class Down extends React.Component {
 
 const HappyClient = (props) => (
     <div className={css.clientsContainer}>
+        <h2 className={css.client__text}>Clientii nostri</h2>
         <div className={css.client}>
             <img src={clientImage} className={css.client__image}></img>
             <span style={{ position: 'relative', top: '-35px' }}>Sergiu Prisacar <br /> USM</span>
@@ -72,30 +78,35 @@ const HappyClient = (props) => (
 
 const RegisterContainer = () => (
     <Container fluid className={`d-flex justify-content-around align-items-center ${css.registerContainer}`}>
-        <Row className='d-flex justify-content-around' style={{width: "70%"}} >
-            <Col sm={6} className='d-flex flex-column align-items-center'>
-                <img src={clientImage} className={css.register__image}></img>
-                <Button className={css.register__button} color="primary">Inregistreazate ca student</Button>
+        <Row className={`d-flex justify-content-between ${css.registerRow}`}  >
+            <Col md={12} lg={6} className='d-flex flex-column align-items-center'>
+                <div className={css.register__image}>
+                    <img src={'/static/images/student.png'} style={{ width: '120px' }}></img>
+                </div>
+                <Button className={css.register__button} color="success">Inregistreazate ca student</Button>
             </Col>
-            <Col sm={6} className='d-flex flex-column align-items-center '>
-                <img src={clientImage} className={css.register__image}></img>
-                <Button className={css.register__button} color="primary">Inregistreazate ca profesor</Button>
+            <Col md={12} lg={6} className='d-flex flex-column align-items-center '>
+                <div className={css.register__image}>
+                    <img src={'/static/images/work.png'} style={{ width: '120px' }}></img>
+                </div>
+                <Button className={css.register__button} color="success">Inregistreazate ca profesor</Button>
             </Col>
         </Row>
     </Container>
 )
 
-const Parteners = (props) => (
+const Parteners = () => (
     <Container className={css.partenersContainer}>
+        <h1 style={{ fontWeight: 'bold', paddingBottom: '10px' }}>Parteneri</h1>
         <Row>
-            <Col sm={12} md={4}>
-                <img src={clientImage}></img>
+            <Col sm={12} md={4} className="d-flex align-items-center justify-content-center">
+                <img src={'/static/images/starnet.jpg'} style={{ width: '80%' }}></img>
             </Col>
-            <Col sm={12} md={4}>
-                <img src={clientImage}></img>
+            <Col sm={12} md={4} className="d-flex align-items-center">
+                <img src={'/static/images/usm.jpg'} style={{ width: '100%' }}></img>
             </Col>
-            <Col sm={12} md={4}>
-                <img src={clientImage}></img>
+            <Col sm={12} md={4} className="d-flex align-items-center">
+                <img src={'/static/images/minister.png'} style={{ width: '100%' }}></img>
             </Col>
         </Row>
     </Container>
