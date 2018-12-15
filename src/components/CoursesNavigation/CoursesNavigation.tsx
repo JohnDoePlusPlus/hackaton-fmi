@@ -3,7 +3,7 @@ import * as React from 'react';
 import Slider from "react-slick";
 import { TABS, COURSES } from '../../constants/constants';
 import * as css from './CoursesNavigation.scss';
-import CarouselSlider from 'react-carousel-slider'
+
 
 interface State {
   navbarTabId: string
