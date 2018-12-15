@@ -2,6 +2,7 @@ import * as React from 'react';
 import { connect, Dispatch } from 'react-redux';
 import { Popover, Position, Menu, MenuItem, PopoverInteractionKind, InputGroup } from "@blueprintjs/core";
 import { Button } from 'reactstrap'
+import { Course } from '../Course/Course';
 
 import * as css from './Header.scss';
 
@@ -12,6 +13,7 @@ class Header extends React.Component<Props> {
     return (
       <header className={css.header}>
         <h1 className={css.header__title}>Pencil.</h1>
+      
         <Popover
           content={
             <Menu>
