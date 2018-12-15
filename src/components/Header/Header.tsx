@@ -1,14 +1,12 @@
 import * as React from 'react';
 import { connect, Dispatch } from 'react-redux';
 import { Popover, Position, Menu, MenuItem, PopoverInteractionKind, InputGroup } from "@blueprintjs/core";
-<<<<<<< HEAD
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, Fade, FormFeedback, FormText } from 'reactstrap'
 import Router from 'next/router';
-=======
-import { Button } from 'reactstrap'
+
+import { Button as RButton} from 'reactstrap'
 import { Course } from '../Course/Course';
 
->>>>>>> 2cf6ba1269d09134ba03eb5e4ff431e3786db03a
 import * as css from './Header.scss';
 
 class Header extends React.Component<any, any> {
@@ -50,7 +48,7 @@ class Header extends React.Component<any, any> {
 
       if (valid) {
         setTimeout(() => {
-window.location.href = '/';
+          window.location.href = '/';
         }, 500)
       }
     }, 1000)
@@ -60,7 +58,6 @@ window.location.href = '/';
     return (
       <header className={css.header}>
         <h1 className={css.header__title}>Pencil.</h1>
-      
         <Popover
           content={
             <Menu>
@@ -85,7 +82,7 @@ window.location.href = '/';
           rightElement={<img className={css.header__searchInput__icon} src="../../../static/images/search.png" alt="Search" ></img>}
           large={true}
         />
-        <Button onClick={this.toggle} className={css.header__logInButton}>Log In</Button>
+        <RButton onClick={this.toggle} className={css.header__logInButton}>Log In</RButton>
 
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={css.modal}>
           <ModalHeader toggle={this.toggle}>Sign In</ModalHeader>
@@ -108,8 +105,8 @@ window.location.href = '/';
                 </span>
               </Fade>
               <ModalFooter style={{ justifyContent: 'center' }}>
-                <Button type="submit" color="success">Log In</Button>
-                <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                <RButton type="submit" color="success">Log In</RButton>
+                <RButton color="secondary" onClick={this.toggle}>Cancel</RButton>
               </ModalFooter>
             </Form>
           </ModalBody>
